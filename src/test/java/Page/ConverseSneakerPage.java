@@ -29,9 +29,7 @@ public class ConverseSneakerPage extends AbstractPage {
     @FindBy(xpath="//button[@class='minicart__header-action minicart__header-action-close']")
     private WebElement closeItemsInCartButtonLocator;
     @FindBy(xpath="//a[@class='header-utility__item--icon minicart__link flex']")
-    @FindBy(css=".favorite-action__add")
-
-    private WebElement changeButtonAddToFavoriteLocator;
+    private WebElement goToCartButtonLocator;
 
     public ConverseSneakerPage(WebDriver driver){
         super(driver);
@@ -76,7 +74,7 @@ public class ConverseSneakerPage extends AbstractPage {
         addToFavoriteButton.click();
 
         new WebDriverWait(driver,20).until(ExpectedConditions.presenceOfElementLocated(By
-                .xpath("//div[@class='primary-information__favorite invert-theme']")));
+                .cssSelector(".favorite-action__add")));
         return this;
     }
 
