@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ConverseCartPage extends AbstractPage {
-    private WebDriver driver;
 
     public ConverseCartPage(WebDriver driver){
         super(driver);
